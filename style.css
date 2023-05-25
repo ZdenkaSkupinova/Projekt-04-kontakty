@@ -9,3 +9,81 @@ body {
 h1 {
 	text-align: center;
 }
+
+.osoba {
+	text-align: center;
+    padding: 5px 5px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgb(171, 248, 233);
+}
+.foto img {
+    border-radius: 50%;
+    margin: 10px 10px 20px 10px;
+}
+h2 {
+	font-size: 16px;
+}
+h2, p {
+    padding: 10px 10px;
+    margin: 0;
+}
+.tym {
+	margin: 10px 30px;	
+	}
+
+@media (max-width: 540px) {
+    .tym {
+        display: flex;
+        flex-wrap: nowrap; 
+        flex-direction: column;
+        flex: 1 1 100%;
+		gap: 10px 1rem;
+    }
+}
+
+@media (min-width: 540px) {
+    .tym {
+        display: flex;
+        flex-wrap: wrap; 
+		gap: 10px 1rem;
+    }
+    .osoba {
+		display: flex;
+        flex: 1 1 46%;
+		text-align: left;
+    }
+    .popis {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+    }
+    h2 {
+        flex-grow: 1;
+    }
+    p {
+        flex-grow: 3;
+    }
+
+}
+
+@media (min-width: 940px) {
+	.tym {
+        display: flex;
+        flex-wrap: nowrap;
+		flex: 1 1 23%;
+		column-gap: 10px; 
+    }
+    .osoba {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+    }
+}
+
+/* jméno a příjmení mají rozdílný počet písmen a zalamují se různě, podle své šířky a šířky karty.
+Dá se nastavit do media query, kde jsou dvě karty vedle velikost h2 tak, aby se u všech karet najednou jméno a příjmení přehodilo u všech čtyřech karet najednou na jeden řádek?
+Karty se zalamují nad šířku 540px pod sebe s fotkou vlevo a textem v pravo a až od nějakých 622px šířky jsou dvě vedle sebe a dvě pod sebou*/
+
+/*  https://www.vzhurudolu.cz/prirucka/css-gap */
